@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#        show_sql: true
+        format_sql: true
+#        default_batch_fetch_size: 100 # IN 쿼리의 개수
+  h2:
+    console:
+      enabled: true
+#  profiles:
+#    include: oauth
+#  session:
+#    store-type: jdbc # SPRING_SESSION, SPRING_SESSION_ATTRIBUTES가 자동 생성. 세션 테이블
+
+logging.level:
+  org.hibernate.SQL: debug
